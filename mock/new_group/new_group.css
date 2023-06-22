@@ -1,4 +1,10 @@
-.group-Button-exit {
+.mb-3{
+    width: 450px;
+    height:60px;
+    left: 50%;
+    margin: 0 auto;
+  }
+  .group-Button-exit {
 	position: absolute;
 	top:75%;
 	left: 35%;
