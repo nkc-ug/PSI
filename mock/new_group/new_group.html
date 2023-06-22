@@ -43,7 +43,34 @@
   <!-- ヘッダー終了 -->
   <main>
     <!-- ここ以降が編集場所 -->
-    
+    <div>
+      <h1 style="text-align:center; height:6rem; border:1px solid rgb(255, 255, 255);">
+          グループ作成画面
+      </h1>
+  </div>
+
+  <form>
+      <div>
+          <div class="mb-3">
+            <label for="exampleInputgroupname" class="form-label">グループ名</label>
+            <input type="groupname" class="form-control" id="exampleInputgroupname" aria-describedby="groupnameHelp">
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputshikaku" class="form-label">資格名</label>
+              <input type="shikaku" class="form-control" id="exampleInputshikaku" aria-describedby="shikakuHelp">
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputa-word" class="form-label">一言</label>
+              <input type="a-word" class="form-control" id="exampleInputa-word" aria-describedby="a-wordHelp">
+          </div>
+      </div>
+      <div class = group-Button-exit>
+            <button type="button" class="btn btn-secondary">戻る</button>
+      </div>
+      <div class = groupButton>
+          <button type="button" class="btn btn-primary">作成</button>
+      </div>
+    </form>
     <!-- ここ以前が編集場所 -->
   </main>
 </body>
