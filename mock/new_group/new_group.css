@@ -1,0 +1,18 @@
+.mb-3{
+    width: 450px;
+    height:60px;
+    left: 50%;
+    margin: 0 auto;
+  }
+  .group-Button-exit {
+	position: absolute;
+	top:75%;
+	left: 35%;
+	margin: -25px 0 0 -25px; /* 完全に中央に配置するため、上・左の margin を負の数に設定 */
+  }
+  .groupButton {
+	position: absolute;
+	top:75%;
+	left: 65%;
+	margin: -25px 0 0 -25px; /* 完全に中央に配置するため、上・左の margin を負の数に設定 */
+  }
