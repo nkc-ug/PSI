@@ -1,9 +1,9 @@
 /*ボタンの設定*/
 .form-select{
-	width: 150px;
-    height: 50px;
+	max-width: 150px;
+  	width: auto;
 	position: absolute;
-	top:27%;
+	top:28%;
 	left: 70%;
   }
 
