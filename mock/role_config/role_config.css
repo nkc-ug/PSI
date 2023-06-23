@@ -4,7 +4,8 @@
   	width: auto;
 	position: absolute;
 	top:10%;
-	left: 70%;
+	left: 80%;
+	margin-left:5px; /* 適宜変更してください */
 
   }
 
