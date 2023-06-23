@@ -1,5 +1,6 @@
 .mb-3{
-    width: 450px;
+    max-width: 450px;
+    width: auto;
     height:60px;
     left: 50%;
     margin: 0 auto;
