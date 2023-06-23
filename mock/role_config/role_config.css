@@ -5,17 +5,21 @@
 	position: absolute;
 	top:10%;
 	left: 70%;
+
   }
 
-  .container {
-	font-size: 24px;
-	margin: 25px;
-	width: 60px;
+  .a {
 	height: 50px;
+	max-width: 800px;
+	width: auto;
+	position: absolute;
+	top: -30%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
 	outline: solid 2px black;
 	/* 準備 */
-	position: relative;
-	display: grid;            /* グリッドディスプレイを指定 */
   }
 
   .grid-item {
@@ -24,8 +28,9 @@
   }
 
   .col-md-4{
+	font-size: 28px;
 	position: absolute;
-	top:20%;
+	top:10%;
 	left:25%;
 	margin: -25px 0 0 -25px;
   }
