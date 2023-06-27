@@ -12,15 +12,18 @@
 }
 
 .align-items-center{
-  margin-left: 60px;
+  margin-left: 0px;
   
 }
 
 .bi-triangle-half{
+  left: 50%;
   transform: scale(2);
 }
 .bi-images,
 .bi-folder2-open,
 .bi-emoji-smile {
+  
+  margin-left: 40px;
   transform: scale(2);
 }
