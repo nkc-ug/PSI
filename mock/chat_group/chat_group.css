@@ -1,17 +1,21 @@
-.chat{
-  margin-left: 50vh;
-  transform: scale(1);
+.bi-person-fill{
+  overflow-y: auto; /* チャットコンテンツのみ垂直方向にスクロール可能にする */
+}
+
+.chatyou{
+  margin-left: 25%;
+  transform: translateY(60px);
 }
 .chatme{
-  margin-right: 20px;
+  margin-left: 75%;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height:78vh;
-  transform: scale(1.1);
+  height: 75vh;
+  overflow-y: hidden; /* 垂直方向のスクロールを非表示にする */
 }
 
 .mb-3 {
@@ -28,11 +32,10 @@
 .bi-triangle-half{
   margin-left: 20px;
   height:11vh;
-  transform: rotate(90deg) scale(2.5);
+  transform: rotate(90deg);
 }
 .bi-images,
 .bi-folder2-open,
 .bi-emoji-smile {
   margin-left: 50px;
-  transform: scale(2.5);
 }
