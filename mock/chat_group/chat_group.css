@@ -1,9 +1,29 @@
-.mb-3{
-	position: absolute;
-	top: 90%;
-  max-width: 100px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh; /* 適切な高さを指定してください */
+}
+
+.mb-3 {
+  max-width: 550px;
   width: auto;
-  }
-  .border-dark{
-    width: 100px;
-  }
+  position: absolute;
+  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.align-items-center{
+  left: 80%;
+  margin-left: 40px; /* アイコン間の間隔を調整する場合は適宜変更してください */
+}
+
+.bi-triangle-half,
+.bi-images,
+.bi-folder2-open,
+.bi-emoji-smile {
+  transform: scale(2);
+}
