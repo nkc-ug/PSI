@@ -1,27 +1,24 @@
 .container {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh; /* 適切な高さを指定してください */
+  justify-content: center;
+  align-items: flex-end;
+  height:90vh;
 }
 
 .mb-3 {
-  max-width: 550px;
+  max-width: 550vh;
   width: auto;
-  position: absolute;
-  right: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
+
 }
 
 .align-items-center{
-  left: 80%;
-  margin-left: 40px; /* アイコン間の間隔を調整する場合は適宜変更してください */
+  margin-left: 60px;
+  
 }
 
-.bi-triangle-half,
+.bi-triangle-half{
+  transform: scale(2);
+}
 .bi-images,
 .bi-folder2-open,
 .bi-emoji-smile {
