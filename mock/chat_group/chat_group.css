@@ -9,23 +9,27 @@
 .chatme{
   margin-left: 75%;
 }
+.rounded-border {
+  border: 2px solid #000;
+  border-radius: 10px;
+}
 
 .container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 75vh;
-  overflow-y: hidden; /* 垂直方向のスクロールを非表示にする */
+  overflow-y: hidden; /* 垂直方向のスクロールを禁止する */
+  overflow-x: hidden; /*水平方向のスクロールを禁止する*/
 }
 
 .mb-3 {
-  max-width: 800px;
+  max-width: 600px;
   width: auto;
-
 }
 
 .align-items-center{
-  margin-right: 20px;
+  margin-right: 5vh;
   height:10vh;
 }
 
@@ -37,5 +41,5 @@
 .bi-images,
 .bi-folder2-open,
 .bi-emoji-smile {
-  margin-left: 50px;
+  margin-left: 30px;
 }
