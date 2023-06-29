@@ -8,6 +8,18 @@
   top: 15vh;
   position: absolute;
 }
+.myname{
+  left:79%;
+  right:auto;
+  top: 10vh;
+  position: fixed;
+}
+
+.youname{
+  left: 31%;
+  top: 27vh;
+  position: absolute;
+}
 
 /* アイコンのスタイル */
 .chatme svg {
