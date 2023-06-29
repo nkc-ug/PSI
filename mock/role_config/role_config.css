@@ -38,3 +38,10 @@
 	margin: -25px 0 0 -25px;
 	position: absolute;
   }
+.human{
+	position: fixed;
+	font-size: 35px;
+	top: 31vh;
+	left:30vh;
+	margin: 0px 0 0 auto;
+}

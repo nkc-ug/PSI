@@ -12,8 +12,8 @@
 /* アイコンのスタイル */
 .chatme svg {
   margin-right: 10px; /* アイコンとテキストの間隔を調整するための設定 */
-  top: -10px;
-  position: absolute;
+  top: 13vh;
+  position: fixed;
 }
 /*ボーダーの大きさ*/
 .border-success {
