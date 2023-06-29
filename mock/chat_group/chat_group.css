@@ -2,29 +2,46 @@
   overflow-y: auto; /* チャットコンテンツのみ垂直方向にスクロール可能にする */
 }
 
-.chatyou {
-  position: absolute;
-  left: 25%;
-  top: 30vh;
-}
-
+/*チャットボックスの位置*/
 .chatme {
-  position: absolute;
-  left: 75%;
+  left:60%;
   top: 15vh;
+  position: absolute;
 }
 
+/* アイコンのスタイル */
+.chatme svg {
+  margin-right: 10px; /* アイコンとテキストの間隔を調整するための設定 */
+  top: -10px;
+  position: absolute;
+}
+/*ボーダーの大きさ*/
 .border-success {
-  border: 2px solid #000;
+  border-width: 7px; /* ボーダーの太さを指定 */
+  display: inline-block; /* テキストを行内ブロック要素として表示 */
+  padding: 2px 10px; /* ボーダーとテキストの間に余白を作成 */
+  border-style: solid; 
   border-radius: 10px;
-  height: 10vh;
-  max-width: 300px;
-  width: auto;
+  background-color: #1AD34E;
+}
+
+.chatyou {
+  left: 30%;
+  top: 30vh;
+  position: absolute;
+}
+
+.border-dark{
+  border-width: 7px; /* ボーダーの太さを指定 */
+  display: inline-block; /* テキストを行内ブロック要素として表示 */
+  padding: 2px 10px; /* ボーダーとテキストの間に余白を作成 */
+  border-style: solid; 
+  border-radius: 10px;
 }
 
 /*全体の要素*/
 .container {
-  right: 50px; /* 左側に20pxずらす */
+  right: 50px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
