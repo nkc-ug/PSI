@@ -42,6 +42,6 @@
 	position: fixed;
 	font-size: 35px;
 	top: 31vh;
-	left:30vh;
-	margin: 0px 0 0 auto;
+	left:auto;
+	margin: 0px 0 0 18vh;
 }
