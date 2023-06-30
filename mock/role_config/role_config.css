@@ -45,10 +45,10 @@
 /*説明文*/
 .explanation{
 	font-size: 35px;
-	top: 70vh;
 	position: absolute;
+	top: 70vh;
 	right: 0;
 	bottom: 0;
-	left: 0;
+	left: 50vh;
 	margin: auto;
 }
