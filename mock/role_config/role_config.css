@@ -9,6 +9,7 @@
 
   }
 
+  /*文字、枠のおおよその位置を決めている*/
   .kengen {
 	height: 50px;
 	max-width: 800px;
@@ -20,16 +21,9 @@
 	left: 0;
 	margin: auto;
 	outline: solid 2px black;
-	/* 準備 */
   }
 
-
-
-  .grid-item {
-	background-color: #000000;
-	padding: 10px;
-  }
-
+/*アイコンの位置*/
   .col-md-4{
 	margin-right: 10px;
 	font-size: 35px;
@@ -39,6 +33,7 @@
 	position: absolute;
   }
 
+/*権限の人の名前部分*/
 .human{
 	position: absolute;
 	font-size: 35px;
@@ -47,6 +42,7 @@
 	
 }
 
+/*説明文*/
 .explanation{
 	text-align: center;
 	font-size: 35px;
