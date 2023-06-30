@@ -1,0 +1,92 @@
+.bi-person-fill{
+  overflow-y: auto; /* チャットコンテンツのみ垂直方向にスクロール可能にする */
+}
+
+/*チャットボックスの位置*/
+.chatme {
+  left:60%;
+  top: 15vh;
+  position: absolute;
+}
+.myname{
+  left:70%;
+  right:auto;
+  top: 10vh;
+  position: fixed;
+}
+
+.youname{
+  left: 31%;
+  top: 27vh;
+  position: absolute;
+}
+
+/* アイコンのスタイル */
+.chatme svg {
+  margin-right: 10px; /* アイコンとテキストの間隔を調整するための設定 */
+  top: 13vh;
+  position: fixed;
+}
+/*ボーダーの大きさ*/
+.border-success {
+  border-width: 7px; /* ボーダーの太さを指定 */
+  display: inline-block; /* テキストを行内ブロック要素として表示 */
+  padding: 2px 10px; /* ボーダーとテキストの間に余白を作成 */
+  border-style: solid; 
+  border-radius: 10px;
+  background-color: #1AD34E;
+}
+
+.chatyou {
+  left: 30%;
+  top: 30vh;
+  position: absolute;
+}
+
+.border-dark{
+  border-width: 7px; /* ボーダーの太さを指定 */
+  display: inline-block; /* テキストを行内ブロック要素として表示 */
+  padding: 2px 10px; /* ボーダーとテキストの間に余白を作成 */
+  border-style: solid; 
+  border-radius: 10px;
+}
+
+/*全体の要素*/
+.container {
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 75vh;
+  overflow-y: hidden; /* 垂直方向のスクロールを禁止する */
+  overflow-x: hidden; /*水平方向のスクロールを禁止する*/
+  position: relative; /* 相対的な位置指定を有効にする */
+}
+
+/*テキストボックス*/
+.mb-3 {
+  max-width: 600px;
+  width: auto;
+}
+
+/*送信ボタンを除くすべてのボタン*/
+.align-items-center{
+  margin-right: 2vh;
+  height:10vh;
+}
+
+/*送信ボタンを除くすべてのボタン*/
+.bi-images,
+.bi-folder2-open,
+.bi-emoji-smile {
+  margin-left: 4vh;
+}
+
+/*送信ボタン*/
+.bi-triangle-half{
+  margin-left: 2vh;
+  height:10vh;
+  max-width: 40px;
+  width: auto;
+  transform: rotate(90deg);
+}

@@ -47,20 +47,34 @@
     <!--h1で権限設定画面と設定している。-->
     <h1 style="text-align:center; height:6rem; border:5px  rgb(255, 255, 255);">
     権限設定</h1>
+
     <!--ここから文字とか枠の設定。-->
-    <div class="a">
-      <div class="row">
-        <div class="col-sm-6 col-md-4">Aの人</div>
+    <div class="kengen">
+        <div class="col-sm-6 col-md-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+         </svg>
+        </div>
+          <div class="human">Aの人</div>
+      
+
+      <!--選択ボックス-->
+      <div class="w-25 p-3">   
+        <select class="form-select" aria-label="Default select example">
+          <option value="1">Master</option>
+          <option value="2">semiwrite</option>
+          <option value="3">Write</option>
+        </select>
       </div>
-          <!--選択ボックス-->
-    <div class="w-25 p-3">   
-      <select class="form-select" aria-label="Default select example">
-        <option value="1">Master</option>
-        <option value="2">Read</option>
-        <option value="3">Write</option>
-      </select>
     </div>
+    
+    <!--説明文-->
+    <div class="explanation">
+      <p>master：writeに加え、権限設定ができます。</p>
+      <p>write：書き込み、すべての単語の書き換えができます。</p>
+      <p>semiwrite：書き込み、自分が作成した単語書き換えることができます。</p>
     </div>
+
     <!-- ここ以前が編集場所 -->
   </main>
 </body>
