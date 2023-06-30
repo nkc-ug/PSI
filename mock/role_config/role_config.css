@@ -48,7 +48,12 @@
 }
 
 .explanation{
+	text-align: center;
 	font-size: 35px;
 	top: 70vh;
 	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
 }
