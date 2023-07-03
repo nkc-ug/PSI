@@ -12,7 +12,7 @@
   /*文字、枠のおおよその位置を決めている*/
   .kengen {
 	height: 50px;
-	max-width: 800px;
+	max-width: 700px;
 	width: auto;
 	position: absolute;
 	top: -30%;
@@ -25,30 +25,31 @@
 
 /*アイコンの位置*/
   .col-md-4{
-	margin-right: 10px;
+	position: relative;
 	font-size: 35px;
-	top:3vh;
-	left:10%;
-	margin: -25px 0 0 -25px;
-	position: absolute;
+	top:-3px;
+	left: 10vh;
+	margin: 0px 0px 0 0px;
   }
 
 /*権限の人の名前部分*/
 .human{
 	position: absolute;
 	font-size: 35px;
-	left:auto;
-	margin: 0px 0 0 18vh;
-	
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 30%;
+	margin: auto;
 }
 
 /*説明文*/
 .explanation{
 	font-size: 35px;
 	position: absolute;
-	top: 70vh;
+	top: 65vh;
 	right: 0;
-	bottom: 0;
-	left: 50vh;
+	bottom: 10%;
+	left: 23%;
 	margin: auto;
 }

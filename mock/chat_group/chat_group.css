@@ -8,6 +8,8 @@
   top: 15vh;
   position: absolute;
 }
+
+/*アイコン上の名前*/
 .myname{
   left:70%;
   right:auto;
@@ -15,6 +17,7 @@
   position: fixed;
 }
 
+/*アイコン上の名前*/
 .youname{
   left: 31%;
   top: 27vh;
@@ -37,10 +40,11 @@
   background-color: #1AD34E;
 }
 
+/*チャットボックスの位置*/
 .chatyou {
   left: 30%;
   top: 30vh;
-  position: absolute;
+  position: relative;
 }
 
 .border-dark{
@@ -53,14 +57,15 @@
 
 /*全体の要素*/
 .container {
-  right: 50px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  top:15%;
+	margin: 0px 0 0 -25px; /* 完全に中央に配置するため、上・左の margin を負の数に設定 */
   height: 75vh;
   overflow-y: hidden; /* 垂直方向のスクロールを禁止する */
   overflow-x: hidden; /*水平方向のスクロールを禁止する*/
-  position: relative; /* 相対的な位置指定を有効にする */
+  position: fixed; /* 相対的な位置指定を有効にする */
 }
 
 /*テキストボックス*/
