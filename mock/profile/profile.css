@@ -1,0 +1,27 @@
+.profile{
+    font-size: 80px;
+    text-align: center;
+    margin-top: 30px !important;
+}
+.id-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px !important;
+}
+.id{
+    font-size: 30px;
+    margin-right: 60px !important;
+}
+.password-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px !important;
+}
+.password{
+    font-size: 30px;
+    margin-right: 20px !important;
+}
+.button{
+    text-align: center;
+    margin-top: 100px !important;
+}
