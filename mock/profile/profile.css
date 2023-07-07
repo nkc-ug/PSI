@@ -1,7 +1,7 @@
 .profile{
-    font-size: 80px;
+    font-size: 120px;
     text-align: center;
-    margin-top: 30px !important;
+    margin-top: 10px !important;
 }
 .id-box{
     display: flex;
@@ -10,7 +10,11 @@
 }
 .id{
     font-size: 30px;
-    margin-right: 60px !important;
+    margin-right: 50px;
+}
+.from-control{
+    width: 500px;
+    background-color: #E6E6FA;
 }
 .password-box{
     display: flex;
@@ -19,7 +23,12 @@
 }
 .password{
     font-size: 30px;
-    margin-right: 20px !important;
+    margin-right: 57px;
+}
+#passwordHlepBlock{
+    text-align: center;
+    font-size: 10px;
+    margin-left: 70px;
 }
 .button{
     text-align: center;
