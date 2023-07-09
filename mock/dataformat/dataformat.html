@@ -48,12 +48,12 @@
       <form>
         
         <div class="mt-4 d-flex justify-content-between align-items-end">
-          <div>
-            <label for="in-title" class="form-label">単語登録</label>
+          <div class="me-5 pe-5 flex-fill">
+            <label for="in-title" class="form-label">登録単語</label>
             <input type="text" id="in-title" class="form-main form-control"><!-- "単語登録に関するinputはクラス"form-main"を設定-->
           </div>
           <div>
-            <button id="call-savedata" class="form-control">下書きを呼び出す</button>
+            <button id="call-draft" class="btn btn-outline-primary">下書きを呼び出す</button>
           </div>
         </div>
 
@@ -61,27 +61,6 @@
           <label for="in-tag" class="form-label">ジャンル</label>
           <div class="d-block d-sm-flex flex-wrap justify-content-start">
 
-            <div class="input-group w-25 me-3 mb-3">
-              <input type="text" id="in-tag-1" class="form-main form-control">
-              <span class="add-tag-form input-group-text">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
-              </span>
-            </div>
-            
-            <div class="input-group w-25 me-3 mb-3">
-              <input type="text" id="in-tag-1" class="form-main form-control">
-              <span class="add-tag-form input-group-text">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
-              </span>
-            </div>
-            
-            <div class="input-group w-25 me-3 mb-3">
-              <input type="text" id="in-tag-1" class="form-main form-control">
-              <span class="add-tag-form input-group-text">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
-              </span>
-            </div>
-            
             <div class="input-group w-25 me-3 mb-3">
               <input type="text" id="in-tag-1" class="form-main form-control">
               <span class="add-tag-form input-group-text">
@@ -100,17 +79,48 @@
           <label for="in-text" class="form-label">解説</label>
           <div class="d-flex justify-content-between align-items-end">
             <div class="flex-fill me-3">
-              <textarea class="form-control" id="in-text"></textarea>
+              <textarea class="main-form form-control" id="in-text"></textarea>
             </div>
             <div style="width: 100px;">
 
             </div>
           </div>
         </div>
+        
+        <div class="mt-4 d-flex justify-content-between align-items-end">
+          <div>
+            <button id="return" class="btn btn-outline-primary">チャットに戻る</button>
+          </div>
+          <div>
+            <button id="submit" class="btn btn-outline-primary">登録</button>
+          </div>
+        </div>
 
       </form>
     </div>
-    
+
+    <!--
+      下書き確認画面
+      opacityを無効化すると見えるようになる
+    -->
+    <div class="modal modal-dialog-centered fade" id="draft-save-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">保存する</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">保存しない</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
     <!-- ここ以前が編集場所 -->
   </main>
 </body>

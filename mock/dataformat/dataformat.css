@@ -1,8 +1,8 @@
-main{
-    
-}
-
 .add-tag-form:hover{
     opacity: 0.8;
     cursor: pointer;
+}
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.2);
 }
