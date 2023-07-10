@@ -61,12 +61,14 @@
           <label for="in-tag" class="form-label">ジャンル</label>
           <div class="d-block d-sm-flex flex-wrap justify-content-start">
 
+            <!--ジャンル入力ボックス-->
             <div class="input-group w-25 me-3 mb-3">
               <input type="text" id="in-tag-1" class="form-main form-control">
               <span class="add-tag-form input-group-text">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
               </span>
             </div>
+            <!--ジャンル入力ボックス終わり,何個でも増やせるはず-->
 
 <!--
             <div class="me-3 mb-3">
@@ -77,17 +79,23 @@
 
         <div class="mt-4">
           <label for="in-text" class="form-label">解説</label>
-          <div class="d-flex justify-content-between align-items-end">
-            <div class="flex-fill me-3">
-              <textarea class="main-form form-control" id="in-text"></textarea>
+          <div class="d-flex justify-content-between align-items-stretch">
+            <div class="flex-fill me-3 mb-3">
+              <textarea class="main-form form-control" id="in-text" style="height: 100%;"></textarea>
             </div>
-            <div style="width: 100px;">
+            <div id="ex-medias">
+              
+            <!--添付ファイルボックス-->
+              <div class="card mb-3">
+                <div class="card-body">添付ファイル</div>
+              </div>
+              <!--添付ファイルボックス終わり,何個でも増やせるはず-->
 
             </div>
           </div>
         </div>
         
-        <div class="mt-4 d-flex justify-content-between align-items-end">
+        <div class="mt-4 mb-5 d-flex justify-content-between align-items-end">
           <div>
             <button id="return" class="btn btn-outline-primary">チャットに戻る</button>
           </div>
@@ -101,17 +109,13 @@
 
     <!--
       下書き確認画面
-      opacityを無効化すると見えるようになる
+      opacityおよびz-indexを無効化すると見えるようになる
     -->
-    <div class="modal modal-dialog-centered fade" id="draft-save-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+    <div style="z-index: -1000;" class="modal modal-dialog-centered fade" id="draft-save-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width: 280px;">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
           <div class="modal-body">
-            ...
+            <p class="my-3">下書きを保存しますか？</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary">保存する</button>

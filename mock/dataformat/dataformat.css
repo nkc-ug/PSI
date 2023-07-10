@@ -2,7 +2,10 @@
     opacity: 0.8;
     cursor: pointer;
 }
-
+#ex-medias .card{
+    min-height: 200px;
+    min-width: 200px;
+}
 .modal{
     background-color: rgba(0, 0, 0, 0.2);
 }
