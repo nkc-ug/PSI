@@ -44,16 +44,32 @@
   <main>
     <!-- ここ以降が編集場所 -->
 
+    <!--
+      .form-main : 単語登録に関するinput,button
+      .add-tag-form : ジャンル名入力ボックスを追加するボタン<span>
+      
+      #in-title : 登録する単語名入力ボックス
+      #load-draft : 下書きを呼び出すボタン
+      #in-tag-1 : ジャンル名入力ボックス
+      #in-text : 解説文入力エリア
+      #ex-medias : 添付ファイルのエリア<div>
+      #return-to-chat : チャットに戻るボタン
+      #submit : 登録ボタン
+      #draft-save-dialog : 下書き保存確認画面<div>
+      #draft-save-accept : 下書き保存、保存するボタン
+      #draft-save-reject : 下書き保存、保存しないボタン
+    -->
+
     <div class="container-md pt-4">
       <form>
         
         <div class="mt-4 d-flex justify-content-between align-items-end">
           <div class="me-5 pe-5 flex-fill">
             <label for="in-title" class="form-label">登録単語</label>
-            <input type="text" id="in-title" class="form-main form-control"><!-- "単語登録に関するinputはクラス"form-main"を設定-->
+            <input type="text" id="in-title" class="form-main form-control">
           </div>
           <div>
-            <button id="call-draft" class="btn btn-outline-primary">下書きを呼び出す</button>
+            <button id="load-draft" class="btn btn-outline-primary">下書きを呼び出す</button>
           </div>
         </div>
 
@@ -81,13 +97,13 @@
           <label for="in-text" class="form-label">解説</label>
           <div class="d-flex justify-content-between align-items-stretch">
             <div class="flex-fill me-3 mb-3">
-              <textarea class="main-form form-control" id="in-text" style="height: 100%;"></textarea>
+              <textarea class="main-form form-control" id="in-text" style="height: 100%; resize: none;"></textarea>
             </div>
             <div id="ex-medias">
               
-            <!--添付ファイルボックス-->
+              <!--添付ファイルボックス-->
               <div class="card mb-3">
-                <div class="card-body">添付ファイル</div>
+                <div class="new-media card-body">添付ファイル</div>
               </div>
               <!--添付ファイルボックス終わり,何個でも増やせるはず-->
 
@@ -100,7 +116,7 @@
             <button id="return-to-chat" class="btn btn-outline-primary">チャットに戻る</button>
           </div>
           <div>
-            <button id="submit" class="btn btn-outline-primary">登録</button>
+            <button id="submit" class="form-main btn btn-outline-primary">登録</button>
           </div>
         </div>
 
@@ -115,11 +131,11 @@
       <div class="modal-dialog" style="width: 280px;">
         <div class="modal-content">
           <div class="modal-body">
-            <p class="my-3">下書きを保存しますか？</p>
+            <p class="my-3" style="text-align: center;">下書きを保存しますか？</p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">保存する</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">保存しない</button>
+          <div class="modal-footer d-flex justify-content-around">
+            <button type="button" id="draft-save-accept" class="btn btn-primary">保存する</button>
+            <button type="button" id="draft-save-reject" class="btn btn-secondary" data-bs-dismiss="modal">保存しない</button>
           </div>
         </div>
       </div>
