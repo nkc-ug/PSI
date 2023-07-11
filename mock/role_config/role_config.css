@@ -1,12 +1,12 @@
 /*ボタンの設定*/
 .p-3{
-	max-width: 150px;
+	max-width: 200px;
   	width: auto;
 	  text-align: center;
-	  margin-top: -4%;
+	  margin-top: -9vh;
 	  margin-right: 0;
 	  margin-bottom: 0;
-	  margin-left: 60%;
+	  margin-left: 75%;
 }
 
   /*文字、枠のおおよその位置を決めている*/
