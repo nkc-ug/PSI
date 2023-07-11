@@ -43,7 +43,19 @@
   <!-- ヘッダー終了 -->
   <main>
     <!-- ここ以降が編集場所 -->
-    
+    <div class="profile">プロフィール画面</div>
+    <div class="id-box">
+      <label class="id">　　ID:　</label>
+      <input type="text" class="from-control" placeholder="IDを入力してください" aria-label="">
+    </div>
+    <div class="password-box">
+      <label for="inputHlepBlock" class="password">パスワード:</label>
+      <input type="password" id="inputHlepBlock" class="from-control" placeholder="パスワードを設定してください" aria-labelledby="passwordHlepBlock">
+    </div>
+    <div id="passwordHlepBlock" class="from-text">※パスワードは、文字と数字を含めて8～20文字で、空白、特殊文字、絵文字を含むことはできません。</div>
+    <div class="button">
+    <button type="button" class="btn btn-outline-primary">変更</button>
+    </div>
     <!-- ここ以前が編集場所 -->
   </main>
 </body>
