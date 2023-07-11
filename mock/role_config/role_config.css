@@ -2,11 +2,12 @@
 .p-3{
 	max-width: 150px;
   	width: auto;
+	  text-align: center;
 	  margin-top: -4%;
-	  margin-right: 40%;
+	  margin-right: 0;
 	  margin-bottom: 0;
 	  margin-left: 60%;
-  }
+}
 
   /*文字、枠のおおよその位置を決めている*/
   .kengen {
@@ -23,17 +24,19 @@
 /*アイコンの位置*/
   .col-md-4{
 	font-size: 35px;
+	text-align: center;
 	margin-top:-3px;
-	margin-left: 10vh;
+	margin-right: 20vh;
   }
 
 /*権限の人の名前部分*/
 .human{
+	text-align: center;
 	font-size: 35px;
-	margin-top: -8%;
-	margin-right: 30%;
+	margin-top: -7vh;
+	margin-right: 0;
 	margin-bottom: 0;
-	margin-left: 30%;
+	margin-left: 0;
 }
 
 /*説明文*/
