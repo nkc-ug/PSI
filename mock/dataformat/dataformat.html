@@ -62,17 +62,19 @@
 
     <div class="container-md pt-4">
       <form>
-        
-        <div id="b1" class="mt-2 d-flex justify-content-between align-items-end">
+
+        <!--#b1 : ブロック1-->
+        <div id="b1" class="mt-2 d-flex flex-wrap justify-content-between align-items-end">
           <div class="ws-1">
             <label for="in-title" class="form-label">登録単語</label>
             <input type="text" id="in-title" class="form-main form-control">
           </div>
           <div>
-            <button id="load-draft" class="btn btn-outline-primary">下書きを呼び出す</button>
+            <button id="load-draft" class="mt-2 btn btn-outline-primary">下書きを呼び出す</button>
           </div>
         </div>
 
+        <!--#b2 : ブロック2-->
         <div id="b2" class="mt-2">
           <label for="in-tag" class="form-label">ジャンル</label>
           <div class="d-block d-sm-flex flex-wrap justify-content-start">
@@ -85,6 +87,26 @@
               </span>
             </div>
             <!--ジャンル入力ボックス終わり,何個でも増やせるはず-->
+            
+            <div class="input-group ws-1 me-3 mb-3">
+              <input type="text" id="in-tag-1" class="form-main form-control">
+              <span class="add-tag-form input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
+              </span>
+            </div>
+            <div class="input-group ws-1 me-3 mb-3">
+              <input type="text" id="in-tag-1" class="form-main form-control">
+              <span class="add-tag-form input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
+              </span>
+            </div>
+            <div class="input-group ws-1 me-3 mb-3">
+              <input type="text" id="in-tag-1" class="form-main form-control">
+              <span class="add-tag-form input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
+              </span>
+            </div>
+            <!--テスト用ジャンル入力ボックス終わり-->
 
 <!--
             <div class="me-3 mb-3">
@@ -93,13 +115,14 @@
           </div>
         </div>
 
+        <!--#b3 : ブロック3-->
         <div id="b3" class="mt-2">
           <label for="in-text" class="form-label">解説</label>
           <div class="d-md-flex justify-content-between align-items-stretch">
             <div class="flex-fill d-flex me-3 mb-3">
-              <textarea class="main-form ws-1 hs-1 mx-auto form-control" id="in-text" style="resize: none;"></textarea>
+              <textarea class="main-form hs-1 mx-auto form-control" id="in-text" style="resize: none;"></textarea>
             </div>
-            <div id="ex-medias">
+            <div id="ex-medias" class="me-3">
               
               <div class="card ws-1 hs-1 mb-3 mx-auto">
                 <div class="new-media card-body">添付ファイル</div>
@@ -109,6 +132,7 @@
           </div>
         </div>
         
+        <!--#b4 : ブロック4-->
         <div id="b4" class="mt-2 mb-5 d-flex justify-content-between align-items-end">
           <div>
             <button id="return-to-chat" class="btn btn-outline-primary">チャットに戻る</button>
