@@ -63,8 +63,8 @@
     <div class="container-md pt-4">
       <form>
         
-        <div class="mt-2 d-flex justify-content-between align-items-end">
-          <div class="w-25">
+        <div id="b1" class="mt-2 d-flex justify-content-between align-items-end">
+          <div class="ws-1">
             <label for="in-title" class="form-label">登録単語</label>
             <input type="text" id="in-title" class="form-main form-control">
           </div>
@@ -73,12 +73,12 @@
           </div>
         </div>
 
-        <div class="mt-2">
+        <div id="b2" class="mt-2">
           <label for="in-tag" class="form-label">ジャンル</label>
           <div class="d-block d-sm-flex flex-wrap justify-content-start">
 
             <!--ジャンル入力ボックス-->
-            <div class="input-group w-25 me-3 mb-3">
+            <div class="input-group ws-1 me-3 mb-3">
               <input type="text" id="in-tag-1" class="form-main form-control">
               <span class="add-tag-form input-group-text">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
@@ -93,15 +93,15 @@
           </div>
         </div>
 
-        <div class="mt-2">
+        <div id="b3" class="mt-2">
           <label for="in-text" class="form-label">解説</label>
-          <div class="d-flex justify-content-between align-items-stretch">
-            <div class="flex-fill me-3 mb-3">
-              <textarea class="main-form form-control" id="in-text" style="height: 100%; resize: none;"></textarea>
+          <div class="d-md-flex justify-content-between align-items-stretch">
+            <div class="flex-fill d-flex me-3 mb-3">
+              <textarea class="main-form ws-1 hs-1 mx-auto form-control" id="in-text" style="resize: none;"></textarea>
             </div>
             <div id="ex-medias">
               
-              <div class="card mb-3">
+              <div class="card ws-1 hs-1 mb-3 mx-auto">
                 <div class="new-media card-body">添付ファイル</div>
               </div>
 
@@ -109,7 +109,7 @@
           </div>
         </div>
         
-        <div class="mt-2 mb-5 d-flex justify-content-between align-items-end">
+        <div id="b4" class="mt-2 mb-5 d-flex justify-content-between align-items-end">
           <div>
             <button id="return-to-chat" class="btn btn-outline-primary">チャットに戻る</button>
           </div>

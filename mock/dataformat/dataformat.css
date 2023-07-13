@@ -2,9 +2,12 @@
     opacity: 0.8;
     cursor: pointer;
 }
-#ex-medias .card{
-    height: 300px;
-    width: 300px;
+
+.ws-1{
+    width: 260px;
+}
+.hs-1{
+    height: 260px;
 }
 .modal{
     background-color: rgba(0, 0, 0, 0.2);
