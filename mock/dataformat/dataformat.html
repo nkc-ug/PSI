@@ -43,7 +43,126 @@
   <!-- ヘッダー終了 -->
   <main>
     <!-- ここ以降が編集場所 -->
-    
+
+    <!--
+      .form-main : 単語登録に関するinput,button
+      .add-tag-form : ジャンル名入力ボックスを追加するボタン<span>
+      
+      #in-title : 登録する単語名入力ボックス
+      #load-draft : 下書きを呼び出すボタン
+      #in-tag-1 : ジャンル名入力ボックス
+      #in-text : 解説文入力エリア
+      #ex-medias : 添付ファイルのエリア<div>
+      #return-to-chat : チャットに戻るボタン
+      #submit : 登録ボタン
+      #draft-save-dialog : 下書き保存確認画面<div>
+      #draft-save-accept : 下書き保存、保存するボタン
+      #draft-save-reject : 下書き保存、保存しないボタン
+    -->
+
+    <div class="container-md pt-4">
+      <form>
+
+        <!--#b1 : ブロック1-->
+        <div id="b1" class="mt-2 d-flex flex-wrap justify-content-between align-items-end">
+          <div class="ws-1">
+            <label for="in-title" class="form-label">登録単語</label>
+            <input type="text" id="in-title" class="form-main form-control">
+          </div>
+          <div>
+            <button id="load-draft" class="mt-2 btn btn-outline-primary">下書きを呼び出す</button>
+          </div>
+        </div>
+
+        <!--#b2 : ブロック2-->
+        <div id="b2" class="mt-2">
+          <label for="in-tag" class="form-label">ジャンル</label>
+          <div class="d-block d-sm-flex flex-wrap justify-content-start">
+
+            <!--ジャンル入力ボックス-->
+            <div class="input-group ws-1 me-3 mb-3">
+              <input type="text" id="in-tag-1" class="form-main form-control">
+              <span class="add-tag-form input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
+              </span>
+            </div>
+            <!--ジャンル入力ボックス終わり,何個でも増やせるはず-->
+            
+            <div class="input-group ws-1 me-3 mb-3">
+              <input type="text" id="in-tag-1" class="form-main form-control">
+              <span class="add-tag-form input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
+              </span>
+            </div>
+            <div class="input-group ws-1 me-3 mb-3">
+              <input type="text" id="in-tag-1" class="form-main form-control">
+              <span class="add-tag-form input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
+              </span>
+            </div>
+            <div class="input-group ws-1 me-3 mb-3">
+              <input type="text" id="in-tag-1" class="form-main form-control">
+              <span class="add-tag-form input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M450-200v-250H200v-60h250v-250h60v250h250v60H510v250h-60Z"/></svg>
+              </span>
+            </div>
+            <!--テスト用ジャンル入力ボックス終わり-->
+
+<!--
+            <div class="me-3 mb-3">
+            </div>-->
+
+          </div>
+        </div>
+
+        <!--#b3 : ブロック3-->
+        <div id="b3" class="mt-2">
+          <label for="in-text" class="form-label">解説</label>
+          <div class="d-md-flex justify-content-between align-items-stretch">
+            <div class="flex-fill d-flex me-3 mb-3">
+              <textarea class="main-form hs-1 mx-auto form-control" id="in-text" style="resize: none;"></textarea>
+            </div>
+            <div id="ex-medias" class="me-3">
+              
+              <div class="card ws-1 hs-1 mb-3 mx-auto">
+                <div class="new-media card-body">添付ファイル</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+        <!--#b4 : ブロック4-->
+        <div id="b4" class="mt-2 mb-5 d-flex justify-content-between align-items-end">
+          <div>
+            <button id="return-to-chat" class="btn btn-outline-primary">チャットに戻る</button>
+          </div>
+          <div>
+            <button id="submit" class="form-main btn btn-outline-primary">登録</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <!--
+      下書き確認画面
+      opacityおよびz-indexを無効化すると見えるようになる
+    -->
+    <div style="z-index: -1000;" class="modal modal-dialog-centered fade" id="draft-save-dialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width: 280px;">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="my-3" style="text-align: center;">下書きを保存しますか？</p>
+          </div>
+          <div class="modal-footer d-flex justify-content-around">
+            <button type="button" id="draft-save-accept" class="btn btn-primary">保存する</button>
+            <button type="button" id="draft-save-reject" class="btn btn-secondary" data-bs-dismiss="modal">保存しない</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
     <!-- ここ以前が編集場所 -->
   </main>
 </body>
