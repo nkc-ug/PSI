@@ -1,19 +1,18 @@
 /*ボタンの設定*/
 .p-3{
-	max-width: 200px;
-  	width: auto;
+  	width: 250px;
 	  text-align: center;
 	  margin-top: -9vh;
-	  margin-right: 0;
-	  margin-bottom: 0;
+	  right: 0;
+	  bottom: 0;
 	  margin-left: 75%;
 }
+
 
   /*文字、枠のおおよその位置を決めている*/
   .kengen {
 	height: 50px;
-	max-width: 700px;
-	width: auto;
+	width: 700px;
 	margin-top: 0;
 	margin-right: 0;
 	margin-bottom: 0;
@@ -47,3 +46,27 @@
 	margin-bottom: 10%;
 	margin-left: 25%;
 }
+
+@media (max-width: 768px) {
+	/* 画面幅が768px以下の場合のスタイル */
+	.p-3 {
+		width:100px;
+		text-align: center;
+		margin-top: -10vh;
+		margin-left: 65%;
+	}
+	.kengen {
+		width: 275px;
+		text-align: center;
+		margin-left: 15%;
+	  }
+	  .col-md-4{
+		font-size: 35px;
+		text-align: center;
+		margin-top:-3px;
+		margin-right: 30vh;
+	  }
+	  h1{
+		font-size:35px;
+	  }
+  }
