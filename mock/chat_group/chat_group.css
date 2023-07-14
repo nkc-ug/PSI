@@ -18,9 +18,8 @@
 
 /*アイコン上の名前*/
 .myname{
-  margin-left:65%;
-  margin-top: -70px;
-
+  margin-left:64%;
+  margin-top: -80px;
 }
 
 /*アイコン上の名前*/
@@ -48,7 +47,7 @@
 /*チャットボックスの位置*/
 .chatyou {
   margin-left: 28%;
-  top: 30vh;
+  margin-top: 10vh;
   margin-bottom: 15%;
 }
 
@@ -74,13 +73,7 @@
   right: 0;
 }
 
-@media (max-width: 768px) {
-  /* 画面幅が768px以下の場合のスタイル */
-  .container {
-    top:50%;
-    align-items: center; /* 中央揃えに変更 */
-  }
-}
+
 
 /*テキストボックス*/
 .mb-3 {
@@ -111,3 +104,32 @@
   transform: rotate(90deg);
   background-color: white;
 }
+@media (max-width: 768px) {
+  /* 画面幅が768px以下の場合のスタイル */
+  .container {
+    top:50%;
+    align-items: center; /* 中央揃えに変更 */
+  }
+  /*アイコン上の名前*/
+  .myname{
+    margin-left:55vh;
+    margin-top: -70px;
+    margin-right: 10px;
+  }
+  .myname p{
+    margin-left:10px;
+    margin-right: 0vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+    white-space: nowrap;
+  }
+  .chatyou {
+    margin-bottom: 25vh;
+  }
+  .youname{
+    margin-left: -8vh;
+    margin-top:-10vh;
+  }
+}
+
+
