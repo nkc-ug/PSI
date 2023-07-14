@@ -62,17 +62,24 @@
   width: auto;
 }
 
-/*全体の要素*/
 .container {
   display: flex;
   justify-content: center;
-  align-items: flex-end; 
-  top:15vh;
-	margin:0 0 0 -25px; /* 完全に中央に配置するため、上・左の margin を負の数に設定 */
-  height: 75vh;
-  overflow-y: hidden; /* 垂直方向のスクロールを禁止する */
-  overflow-x: hidden; /*水平方向のスクロールを禁止する*/
-  position: fixed; /* 相対的な位置指定を有効にする */
+  align-items: flex-end;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  /* 画面幅が768px以下の場合のスタイル */
+  .container {
+    top:50%;
+    align-items: center; /* 中央揃えに変更 */
+  }
 }
 
 /*テキストボックス*/
