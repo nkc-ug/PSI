@@ -1,0 +1,16 @@
+.add-tag-form:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.ws-1{
+    width: 260px;
+    max-width: 260px;
+}
+.hs-1{
+    height: 260px;
+    max-height: 260px;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.2);
+}
