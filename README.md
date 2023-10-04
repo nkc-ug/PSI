@@ -1,8 +1,6 @@
 # PSI
 
 # firebase
-実行環境中で次のコマンドを使う必要がある（たぶん）
-npm ci && npm run build && firebase deploy
 
 # React + TypeScript + Vite
 
