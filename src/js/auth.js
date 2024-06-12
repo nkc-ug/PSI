@@ -1,6 +1,6 @@
 // auth.js
 
-import { auth, db } from '../firebase-config.js'; // Firebase設定をインポート
+import { auth, db } from '../../firebase-config.js'; // Firebase設定をインポート
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js';
 import { setDoc, doc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js';
 
@@ -102,3 +102,5 @@ function displayDebugMessage(message) {
     document.body.appendChild(newDebugElement);
   }
 }
+
+export { displayDebugMessage };
