@@ -1,13 +1,41 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Auth</title>
+    <!-- Firebase関連のスクリプトをインポート -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
+    <!-- ローカルのスクリプトをインポート -->
+    <script type="module" src="./firebase-config.js"></script>
+    <script type="module" src="./src/auth.js"></script>
+</head>
+<body>
+  <div>
+    <h2>Sign Up</h2>
+    <input type="email" id="signup-email" placeholder="Email">
+    <input type="password" id="signup-password" placeholder="Password">
+    <button id="signup-btn">Sign Up</button>
+  </div>
+  
+  <div>
+    <h2>Log In</h2>
+    <input type="email" id="login-email" placeholder="Email">
+    <input type="password" id="login-password" placeholder="Password">
+    <button id="login-btn">Log In</button>
+  </div>
+  
+  <button id="logout-btn">Log Out</button>
+
+  <!-- デバッグメッセージ表示用の要素 -->
+  <div id="debug-message" style="color: red;"></div>
+
+  <script type="module">
+    import { initializeAuth } from './src/auth.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeAuth();
+    });
+  </script>
+</body>
 </html>
