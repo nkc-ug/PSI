@@ -1,4 +1,0 @@
-React,Typescript
-
-1.まずローカルでhelloworldができるプロジェクトを作成
-

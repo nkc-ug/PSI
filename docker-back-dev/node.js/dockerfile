@@ -23,4 +23,4 @@ RUN npm install
 # 権限
 # USER node
 # コンテナ構築時にデフォルトで実行するコマンドをします。RUNと同じで/bit/sh -cと同じで、docker runの実行時にコマンドが実行されます。
-CMD "npm" "start"
+# CMD "npm" "start"

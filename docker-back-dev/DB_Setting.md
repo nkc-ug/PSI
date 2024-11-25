@@ -9,7 +9,7 @@
 
 -- DB作成 `create database psi;`
 
--- 権限作成 `GRANT ALL PRIVILEGES ON psi.* TO 'user'@'%';`
+-- 権限作成 `GRANT ALL PRIVILEGES ON psi.* TO 'user'@'%';`(セキュリティ上あんまりよくないんだけどこれでしかできない)
 
 -- 変更の反映 `FLUSH PRIVILEGES;`
 
@@ -28,36 +28,19 @@
 
 -- DB使用 `use psi;`
 
--- 仮データ作成(一括コピーしておっけ)
+-- 仮データ作成(一括だとできなかったんで、一つずつコピペして実行)
 
-```sql
-CREATE TABLE user (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL
-);
+-- 一旦Node.jsの方で作業する。node.jsのコンテナの中に入ってからnpx prisma db migrateでスキーマを作成 
+(スキーマ作成に必要な、schema.prismaは既に書いてあるため問題なし)
 
-CREATE TABLE word (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  word VARCHAR(255) NOT NULL,
-  meaning TEXT NOT NULL,
-  user_id INT,
-  FOREIGN KEY (user_id) REFERENCES user(id)
-);
-
--- usertable テーブルにデータを挿入
-INSERT INTO user (username, email) VALUES
-('user1', 'user1@example.com'),
-('user2', 'user2@example.com'),
-('user3', 'user3@example.com');
-
--- wordtable テーブルにデータを挿入
-INSERT INTO word (word, meaning, user_id) VALUES
-('Word1', 'Meaning1', 1),
-('Word2', 'Meaning2', 2),
-('Word3', 'Meaning3', 3),
-('Word4', 'Meaning4', 1);
+```mysqlのコンテナに戻って、DB内でcreate_table文を実行。
+[create_table.sqlを参照](file:/docker-back-dev/node.js/node-project/create_table.sql)
+を参照。（御免リンク張れてない）
 ```
---データが作成できているか確認 `select * from user;`
+
+-- 実行し終わったら、 `npx prisma studio`でサーバーを立ち上げ
+ブラウザで[https127.0.0.1:5555](http://127.0.0.1:5555/)にアクセスしテーブルが作られていることを確認。
+か、node.jsのコンテナの中で、`npx prisma db seed`を実行すると、テストデータが入っていることを確認。
+
 
 ここまでできたらDBの設定は完了です！

@@ -3,8 +3,15 @@
 
 ***開発手順***
 ****フロントエンド****
+1.dockerのreactコンテナを起動
+
+2.起動したら、127.0.0.1:3000にアクセスし、hello worldできたら完了。
 
 
+
+メモ
+~停止中のコンテナに無理やり入る方法~
+・docker-compose run --rm front /bin/sh 
 
 ***-バージョン-***
 | OS              | Alpine Linux v3.18 |

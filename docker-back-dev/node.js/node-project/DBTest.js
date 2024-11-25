@@ -3,6 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql2');
+const { faker } = require('@faker-js/faker');
+
 
 const connection = mysql.createConnection({
   host: 'mysql',  
@@ -25,11 +27,23 @@ router.get('/', (req, res) => {
   res.send('Database Test');
 });
 
-router.get('/users', async (req, res) => {
+router.get('/User', async (req, res) => {
   console.log('Handling GET request to /users');
 
   try {
-    const queryResults = await performAsyncOperation('SELECT * FROM user');
+    const queryResults = await performAsyncOperation('SELECT * FROM User');
+    res.json({ queryResults });
+  } catch (error) {
+    console.error('Error in async operations:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.get('/Group', async (req, res) => {
+  console.log('Handling GET request to /groups');
+
+  try {
+    const queryResults = await performAsyncOperation('SELECT * FROM `Group`');//Groupは予約語なので、``で囲んで認識させる
     res.json({ queryResults });
   } catch (error) {
     console.error('Error in async operations:', error);
@@ -50,5 +64,6 @@ function performAsyncOperation(query) {
     });
   });
 }
+
 
 module.exports = router;

@@ -1,0 +1,122 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  id            Int            @id @default(autoincrement())
+  name          String         @db.VarChar(20)
+  introduce     String?        @db.VarChar(100)
+  email         String         @db.VarChar(50)
+  created_date  DateTime
+  wordsLists    WordsList[]
+  groups        UserGroup[]
+  words         Word[]
+  favorites     Favorite[]
+  notifications Notification[]
+}
+
+model Group {
+  id           Int             @id @default(autoincrement())
+  name         String          @db.VarChar(100)
+  introduce    String?         @db.VarChar(400)
+  created_date DateTime
+  users        UserGroup[]
+  wordsLists   WordListGroup[]
+}
+
+model UserGroup {
+  user_id  Int
+  group_id Int
+  user     User  @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  group    Group @relation(fields: [group_id], references: [id], onDelete: Cascade)
+
+  @@id([user_id, group_id])
+}
+
+model WordsList {
+  id           Int             @id @default(autoincrement())
+  name         String          @db.VarChar(100)
+  introduce    String?         @db.VarChar(400)
+  created_date DateTime
+  author_id    Int
+  user         User            @relation(fields: [author_id], references: [id], onDelete: Cascade)
+  groups       WordListGroup[]
+  words        Word[]
+}
+
+model WordListGroup {
+  word_list_id Int
+  group_id     Int
+  wordList     WordsList @relation(fields: [word_list_id], references: [id], onDelete: Cascade)
+  group        Group     @relation(fields: [group_id], references: [id], onDelete: Cascade)
+
+  @@id([word_list_id, group_id])
+}
+
+model Genre {
+  id        Int         @id @default(autoincrement())
+  name      String      @db.VarChar(255)
+  parent_id Int?
+  level     Int
+  word_id   Int
+  parent    Genre?      @relation("GenreHierarchy", fields: [parent_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  children  Genre[]     @relation("GenreHierarchy")
+  words     WordGenre[]
+}
+
+model Word {
+  id           Int            @id @default(autoincrement())
+  title        String         @db.VarChar(30)
+  description  String?        @db.VarChar(400)
+  image        Bytes?
+  word_list_id Int
+  author_id    Int
+  genre_level  Int
+  created_date DateTime
+  updated_date DateTime
+  wordsList    WordsList      @relation(fields: [word_list_id], references: [id], onDelete: Cascade)
+  user         User           @relation(fields: [author_id], references: [id], onDelete: Cascade)
+  genres       WordGenre[]
+  Favorite     Favorite[]
+  Notification Notification[]
+}
+
+model WordGenre {
+  word_id  Int
+  genre_id Int
+  word     Word  @relation(fields: [word_id], references: [id], onDelete: Cascade)
+  genre    Genre @relation(fields: [genre_id], references: [id], onDelete: Cascade)
+
+  @@id([word_id, genre_id])
+}
+
+model Favorite {
+  id           Int            @id @default(autoincrement())
+  user_id      Int
+  word_id      Int
+  created_date DateTime       @default(now())
+  user         User           @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  word         Word           @relation(fields: [word_id], references: [id], onDelete: Cascade)
+  Notification Notification[]
+}
+
+model Notification {
+  id           Int      @id @default(autoincrement())
+  title        String   @db.VarChar(30)
+  word_id      Int
+  user_id      Int
+  like_id      Int
+  is_read      Boolean?
+  event_type   String?  @db.VarChar(20)
+  created_date DateTime
+  updated_date DateTime
+  word         Word     @relation(fields: [word_id], references: [id], onDelete: Cascade)
+  user         User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  favorite     Favorite @relation(fields: [like_id], references: [id], onDelete: Cascade)
+}

@@ -3,14 +3,15 @@ services:
   back:
     build:
       context: ../PSI/docker-back-dev/node.js
-      dockerfile: /dockerfile
+      dockerfile: dockerfile
     container_name: node.js
-    image: node:16-alpine3.15
     tty: true
     volumes: 
       - ../PSI/docker-back-dev/node.js/node-project:/app
+      - /app/node_modules  # node_modules はコンテナ内に保持(ホストとコンテナでnode_modulesを分ける。)
     ports:
-      - "5000:5000"
+      - "5000:5000" #<ホストポート>:<コンテナポート>
+      - "5555:5555" #Prisma用
     depends_on:
       - db
     networks:
@@ -22,10 +23,10 @@ services:
     environment:
       - MYSQL_HOST=mysql
       - MYSQL_USER=user
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_DATABASE = psi
+      - MYSQL_DATABASE=psi
       - TZ=Asia/Tokyo
-      - MYSQL_SERVER=db
       # 永続ボリューム、コンテナ内のファイルと連動
     volumes:
       - ../PSI/docker-back-dev/mysql:/var/lib/mysql
@@ -40,17 +41,22 @@ services:
     container_name: react
     build:
       context: ../PSI/docker-front-dev/react
-      dockerfile: /dockerfile
+      dockerfile: dockerfile
     ports:
-      - "4000:4000"
+      - "3000:3000"
     environment:
-      REACT_APP_API_URL: http://back:3000
+      REACT_APP_API_URL: http://back:5000 
+    volumes:
+      - ../PSI/docker-front-dev/react/psi-react:/app #ローカルファイルをコンテナにマウント
+      - /app/node_modules #ホストのnode_modulesと、コンテナのnode_modulesの競合を防ぐ。
     networks:
       - frontend
 
 networks:
   backend:
   frontend:
+  default:
+
 
 volumes:
   mysql-data:
